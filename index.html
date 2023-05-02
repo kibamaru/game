@@ -5,16 +5,19 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Game</title>
-  <link rel="stylesheet" href="style.css" type="text/css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lato:ital@1&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/3f8afb9991.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="./bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body>
-    <div class="content">
-      <div class="player1">
-        <div class="name">
+    <div class="content container-fluid">
+
+      <!-- Player 1-->
+      <div class="player1 container">
+        <div class="name container">
           <p id="player1">PLAYER 1 </p>
           <button id="pseudo1"><i class="fa-solid fa-pen-nib"></i></button>
         </div>
@@ -25,13 +28,12 @@
           <p id="currentScore1">0</p>
         </div>
       </div>
-      <div class="menu">
-        <div>
-          <button id="newGame"><i class="fa-solid fa-dice"> Nouvelle Partie</i></button>
-          <button id="regle"><i class="fa-solid fa-question"> Regles</i></button>
-        </div>
-        
-        
+
+      <!-- menu -->
+      <div class="menu container">
+        <button id="newGame"><i class="fa-solid fa-dice"> Nouvelle Partie</i></button>
+        <button id="regle"><i class="fa-solid fa-question"> Regles</i></button>
+      
         <div class="dice">
           <img src="./image/Dice-1-b.svg" alt="de1" id="de1">
           <img src="./image/Dice-2-b.svg" alt="de2" id="de2">
@@ -40,24 +42,28 @@
           <img src="./image/Dice-5-b.svg" alt="de5" id="de5">
           <img src="./image/Dice-6-b.svg" alt="de6" id="de6">
         </div>
-        <div class="main">
+        
           <button id="rollDice"><i class="fa-solid fa-arrows-rotate"> Lancer le des</i></button>
           <button id="hold"><i class="fa-solid fa-sack-dollar"> Encaisser</i></button>
-        </div>
       </div>
-      <div class="player2">
-        <div class="name">
+
+      <!-- Player 2-->
+      <div class="player2 container">
+        <div class="name container">
           <p id="player2">PLAYER 2</p>
           <button id="pseudo2"><i class="fa-solid fa-pen-nib"></i></button>
-          </div>
-          <p id="global2">0</p>
+        </div>
+        <p id="global2">0</p>
         
         <div class="currentScore2">
           <h5>ROUND</h5>
          <p id="currentScore2">0</p>
         </div>
       </div>
+      
     </div>
+  <script src="./bootstrap/bootstrap.bundle.min.js"></script>
+  <script src="./bootstrap/bootstrap.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

@@ -10,6 +10,7 @@ body {
   height: 98vh;
   width: 95vw;
   display: flex;
+  padding: 1rem;
 }
 
 .player1, .player2 {
@@ -22,10 +23,10 @@ body {
   align-items: center;
   justify-content: space-around;
   border-radius: 10px;
+  
 }
 
 .menu {
-  height: 100%;
   width: 20%;
   background-color: blueviolet;
   display: flex;
@@ -34,16 +35,11 @@ body {
   justify-content: space-around;
 }
 
-#global1, #global2 {
-  font-size: 2em;
-  text-align: center;
-  margin: 0;
-}
+
 
 .currentScore1, .currentScore2 {
   background-color: blueviolet;
-  width: 20%;
-  height: 30%;
+  padding: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -65,27 +61,7 @@ h5 {
   width: 5em;
 }
 
-#de1 {
-  display: none;
-}
-
-#de2 {
-  display: none;
-}
-
-#de3 {
-  display: none;
-}
-
-#de4 {
-  display: none;
-}
-
-#de5 {
-  display: none;
-}
-
-#de6 {
+#de1, #de2, #de3, #de4, #de5, #de6 {
   display: none;
 }
 
@@ -94,20 +70,77 @@ h5 {
   border-radius: 10px;
 }
 
-.dice {
-  height: 5em;
-}
-
 .name {
   display: flex;
- 
+  justify-content: center;
 }
 
 #pseudo1, #pseudo2 {
-  height: 2em;
+  font-size: 0.2em;
   align-self: center;
 }
 
 #player1, #player2 {
   margin: 5px;
+  font-size: 0.5em;
+}
+
+@media screen and (min-width: 724px) {
+  #global1, #global2 {
+    font-size: 8rem;
+    text-align: center;
+  }
+    #pseudo1, #pseudo2 {
+      font-size: 0.5em;
+      align-self: center;
+  }
+
+  #player1, #player2 {
+    font-size: 1em;
+  }
+}
+
+@media screen and (max-width: 630px) {
+  .menu {
+    position: absolute;
+    flex-direction: row;
+    width: 100%;
+    bottom: 0px;
+  }
+
+  .player1, .player2 {
+    height: 80%
+  }
+
+  .currentScore1, .currentScore2 {
+    width: 80%;
+  }
+
+  h5 {
+    font-size: 0.5em;
+  }
+}
+
+@media screen and (max-width: 590px) {
+  .dice {
+    padding: 1em;
+  }
+
+  button {
+    width: 15%;
+    font-size: 0.6em;
+  }
+
+  .content {
+    justify-content: space-around;
+  }
+
+  .name { 
+    font-size: 0.7em;
+  }
+
+  #de1, #de2, #de3, #de4, #de5, #de6 {
+    height: 2em;
+    width: 2em;
+  }
 }

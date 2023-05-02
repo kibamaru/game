@@ -1,10 +1,13 @@
 const rollDice = document.getElementById('rollDice')
+
+//display du dés
 const de1 = document.getElementById('de1')
 const de2 = document.getElementById('de2')
 const de3 = document.getElementById('de3')
 const de4 = document.getElementById('de4')
 const de5 = document.getElementById('de5')
 const de6 = document.getElementById('de6')
+
 const globalScore1 = document.getElementById('global1')
 const globalScore2 = document.getElementById('global2')
 const currentScore1 = document.getElementById('currentScore1')
@@ -21,12 +24,14 @@ let roundValue = 0
 let globalValue1 = 0
 let globalValue2 = 0
 
+//fonction dés 1-6
 function random(min, max) {
   min = Math.ceil(min);
   max = Math.floor(max);
   return Math.floor(Math.random() * (max - min +1)) + min;
 }
 
+//fonction bouton roll dice
 rollDice.addEventListener('click', () => {
   de1.style.display = 'none'
   de2.style.display = 'none'
@@ -94,6 +99,7 @@ rollDice.addEventListener('click', () => {
   }
 })
 
+//fonction encaisser points du round
 hold.addEventListener('click', () => {
   if(currentScore === currentScore1) {
     globalValue1 = globalValue1 + roundValue
@@ -119,6 +125,7 @@ hold.addEventListener('click', () => {
   }
 })
 
+//reinitialiser la partie
 newGame.addEventListener('click', () => {
   de1.style.display = 'none'
   de2.style.display = 'none'
@@ -142,6 +149,7 @@ newGame.addEventListener('click', () => {
 
 })
 
+//regles du jeu
 regle.addEventListener('click', () => {
   alert(`Règles :
   Le jeu comprend 2 joueurs sur un seul et même écran.
@@ -155,6 +163,7 @@ regle.addEventListener('click', () => {
   Le premier joueur qui atteint les 100 points sur global gagne le jeu`)
 })
 
+//entrer pseudo1
 pseudo1.addEventListener('click', () => {
   let name1 = prompt('Quel est votre nom ?')
   if (name1 === '') {
@@ -163,6 +172,7 @@ pseudo1.addEventListener('click', () => {
   player1.innerText = `${name1}`
 })
 
+//entrer pseudo2
 pseudo2.addEventListener('click', () => {
   let name2 = prompt('Quel est votre nom ?')
   if (name2 === '') {
